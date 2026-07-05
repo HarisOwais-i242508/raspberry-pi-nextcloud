@@ -129,7 +129,7 @@ Even if containers are recreated or updated, user files and database data remain
 
 # What I Learned
 
-Through this project I gained practical experience with:
+Through this project, I gained practical experience with:
 
 - Docker Images vs Containers
 - Docker Compose
@@ -150,7 +150,9 @@ Through this project I gained practical experience with:
 ## Pi Setup
 - Install **Raspberry Pi Imager**.
 - Burn **Raspberry Pi OS Lite (64-bit)** into your secondary storage device.
-- Plug that storage device to the Raspberry Pi 3/4 and power the Pi. Wait a few minutes and then go to your laptop Powershell and perform SSH Handshake using command `ssh <username>@<ip_address_of_pi>`  . It will then prompt you for the password. Enter password and then you will gain remote access to the raspberry pi through your laptop.
+  - While customizing the install, make sure to **enable SSH** and choose your Wifi so that the imager implicitly deals with the tedious work of configuring the network for the first time.
+- Plug that storage device into the Raspberry Pi 3/4 and power the Pi. Also, once you have powered it on for the first time, make your Raspberry Pi's IP Address static through your router settings. Since usually IP addresses aren't static by default and change every 24 hours, you'd have to see your Pi's IP every time you want to access it (since it will change).
+- After setting the IP static, go to your laptop's PowerShell and perform SSH Handshake using the command `ssh <username>@<ip_address_of_pi>` . It will then prompt you for the password. Enter the password, and then you will gain remote access to the Raspberry Pi through your laptop.
 - Now, you will clone the repository.
 
 Clone the repository:
